@@ -1,11 +1,53 @@
 .header {
   background-color: #333;
   color: white;
-  padding: 10px;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: 2px solid #ff69b4; /* Hot Pink */
 }
 
 .header nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.header nav a:hover {
+  color: #ff69b4; /* Hot Pink */
+}
+
+.navLink {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff69b4; /* Hot Pink */
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

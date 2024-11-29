@@ -2,8 +2,15 @@
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
+  padding: 20px;
+  position: relative;
   bottom: 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  border-top: 2px solid #ff69b4; /* Hot Pink */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
 }
